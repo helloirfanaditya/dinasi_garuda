@@ -1,0 +1,14 @@
+@import 'components/util';
+@import 'components/navbar';
+@import 'components/jumbotron';
+@import 'components/about_us';
+@import 'components/kingdom';
+@import 'components/new_collection';
+@import 'components/contact_us';
+@import 'components/footer';
+@import 'components/kingdom/kingdom_detail';
+@import 'components/collection/collection';
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+#contact_us {
+    margin-top: 5%;
+    .container {
+        .row {
+            .col-lg-6 {
+                h5 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    margin-bottom: 5%;
+                }
+                button.btn.btn-orange {
+                    background-color: #FF9921;
+                    color: white;
+                    font-weight: 600;
+                    width: 100%;
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
