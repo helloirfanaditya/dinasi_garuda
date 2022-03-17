@@ -35,10 +35,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="calendar.html">
+                    <a href="{{ route('admin.general') }}">
                         <span> Setting </span>
                     </a>
                 </li>
+                @if (auth('admin')->user()->roles->roles == 'Admin Master')
+                    <li class="menu-title">Admin Master Access</li>
+                    <li>
+                        <a href="{{ route('admin.add-admin') }}">
+                            <span>Add Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.list-admin') }}">
+                            <span>List Admin</span>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

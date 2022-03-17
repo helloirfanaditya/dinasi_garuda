@@ -21,14 +21,25 @@ class AuthController extends Controller
 
     public function doLogin(Request $req)
     {
+        $filtering = filter_var($req->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        if ($filtering == 'username') {
+            $data = Admin::where('username', $req->email)->first();
+            if ($data) {
+                $type = $data->email;
+            } else {
+                return back()->with('info', 'Invalid Credentials');
+            }
+        } else {
+            $type = $req->email;
+        }
         $credentials = [
-            'email' => $req->email,
+            'email' => $type,
             'password' => $req->password,
         ];
         if (auth('admin')->attempt($credentials)) {
             return redirect('/admin/dashboard');
         } else {
-            return back();
+            return back()->with('info', 'Invalid Credentials');
         }
     }
 

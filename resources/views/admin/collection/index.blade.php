@@ -12,7 +12,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Greeva</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dinasti Garuda</a></li>
                                     <li class="breadcrumb-item active">Collection</li>
                                 </ol>
                             </div>
@@ -50,11 +50,11 @@
                                         <table class="table table-borderless" id="collection">
                                             <thead>
                                                 <tr>
-                                                    <th>no</th>
-                                                    <th>Collection</th>
-                                                    <th>Category</th>
-                                                    <th>View</th>
-                                                    <th>Action</th>
+                                                    <th>NO</th>
+                                                    <th>COLLECTION</th>
+                                                    <th>CATEGORY</th>
+                                                    <th>VIEW</th>
+                                                    <th>ACTION</th>
                                                 </tr>
                                             </thead>
                                             <tbody></tbody>
@@ -64,10 +64,10 @@
                                         <table class="table table-borderless" id="collection_category" style="width: 100%;">
                                             <thead>
                                                 <tr>
-                                                    <th>No</th>
-                                                    <th>Category</th>
-                                                    <th>Created</th>
-                                                    <th>Action</th>
+                                                    <th>NO</th>
+                                                    <th>CATEGORY</th>
+                                                    <th>CREATED</th>
+                                                    <th>ACTION</th>
                                                 </tr>
                                             </thead>
                                             <tbody></tbody>
@@ -90,7 +90,7 @@
                 serverSide: true,
                 ajax: "/admin/collection/table",
                 columns: [{
-                        data: 'no'
+                        data: 'DT_RowIndex'
                     },
                     {
                         data: 'collection'
@@ -111,7 +111,7 @@
                 serverSide: true,
                 ajax: "/admin/collection/category/table",
                 columns: [{
-                        data: 'no'
+                        data: 'DT_RowIndex'
                     },
                     {
                         data: 'collection_category'

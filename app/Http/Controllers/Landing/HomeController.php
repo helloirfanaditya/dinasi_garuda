@@ -14,12 +14,21 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $kingdoms = Kingdom::paginate(3);
+        $kingdoms = Kingdom::limit(6)->get();
         $collection_category = CollectionCategory::all();
-        $collections = Collection::limit(6)->get();
-        $news = News::latest()->limit(1)->first();
-        $related_news = News::whereNotIn('id', [$news->id])->take(2)->get();
+        $collections = Collection::latest()->limit(6)->get();
+        $news = Event::latest()->limit(1)->first();
+        $related_news = News::take(2)->get();
         return view('landings.home', compact('related_news', 'news', 'kingdoms', 'collection_category', 'collections'));
+    }
+
+    public function sendMessage(Request $req)
+    {
+        $req->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'comments' => 'required',
+        ]);
     }
 
     public function kingdom()
@@ -39,10 +48,18 @@ class HomeController extends Controller
         })->paginate(12);
         if (!$req->cat) {
             $collections = Collection::orderBy('view', 'ASC')->paginate(12);
-
         }
         $collection_category = CollectionCategory::all();
         return view('landings.collection', compact('collections', 'collection_category'));
+    }
+
+    public function CollectionDetail($id)
+    {
+        $collection = Collection::whereId($id)->firstOrFail();
+        $collection->view = $collection->view + 1;
+        $collection->save();
+        $otherCollection = Collection::whereNotIn('id', [$collection->id])->take(4)->get();
+        return view('landings.detail.collection-detail', compact('collection', 'otherCollection'));
     }
 
     public function news()
@@ -81,5 +98,15 @@ class HomeController extends Controller
         $kingdom = Kingdom::whereId($id)->firstOrFail();
         $related = Kingdom::whereNotIn('id', [$id])->inRandomOrder()->take(2)->get();
         return view('landings.detail.kingdom-detail', compact('kingdom', 'related'));
+    }
+
+    public function privacy()
+    {
+        return view('landings.privacy-policy');
+    }
+
+    public function term()
+    {
+        return view('landings.term-condition');
     }
 }

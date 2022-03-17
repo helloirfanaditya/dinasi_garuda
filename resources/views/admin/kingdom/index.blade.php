@@ -12,7 +12,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Greeva</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dinasti Garuda</a></li>
                                     <li class="breadcrumb-item active">Kingdom</li>
                                 </ol>
                             </div>
@@ -34,10 +34,10 @@
                                 <table class="table table-borderless" id="kingdom">
                                     <thead>
                                         <tr>
-                                            <th>no</th>
-                                            <th>Kerajaan</th>
-                                            <th>Period</th>
-                                            <th>Action</th>
+                                            <th>NO</th>
+                                            <th>KERAJAAN</th>
+                                            <th>PERIOD</th>
+                                            <th>ACTION</th>
                                         </tr>
                                     </thead>
                                     <tbody></tbody>
@@ -58,7 +58,7 @@
                 serverSide: true,
                 ajax: "/admin/kingdom/table",
                 columns: [{
-                        data: 'no'
+                        data: 'DT_RowIndex'
                     },
                     {
                         data: 'kerajaan'

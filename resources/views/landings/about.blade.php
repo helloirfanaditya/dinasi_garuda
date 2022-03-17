@@ -12,11 +12,7 @@
             </div>
             <div class="col-md-6">
                 <h1 class="mb-5">Dinasti Garuda</h1>
-                <p class="text-black" style="font-size: 24px;">Dynasty Garuda is a STRATEGY Game with the initial concept
-                    of a Card Battle Game
-                    that takes the theme of
-                    Majapahit as the opening game to usher in the Vision and Mission of "Mempersatukan Nusantara" in
-                    accordance with the Sumpah Palapa.</p>
+                {!! $data_general['ABOUT'] !!}
             </div>
         </div>
     </div>
@@ -24,32 +20,11 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>Vision</h1>
-                <ul>
-                    <li class="font-description text-black mb-2">
-                        Menjadi Provider Platform Games No. 1 di Indonesia yang mengangkat tema budaya, kerajaan dan sejarah
-                        Indonesia.
-                    </li>
-                    <li class="font-description text-black mb-2">
-                        Menjadi Studio Animasi dengan konten-konten sejarah dan budaya Indonesia.
-                    </li>
-                </ul>
+                {!! $data_general['VISI_PAGE'] !!}
             </div>
             <div class="col-md-6">
                 <h1>Mission</h1>
-                <ul>
-                    <li class="font-description text-black mb-2">Mengangkat sejarah dan budaya Indonesia lewat Games.</li>
-                    <li class="font-description text-black mb-2">Mengembangkan banyak Games dengan tema Kerajaan-Kerajaan
-                        yang
-                        pernah ada di Indonesia.</li>
-                    <li class="font-description text-black mb-2">Memberikan edukasi sejarah melalui Games.</li>
-                    <li class="font-description text-black mb-2">Mengembangkan beberapa video dan konten animasi dengan tema
-                        budaya dan sejarah Indonesia dengan cara
-                        yang
-                        keren.</li>
-                    <li class="font-description text-black mb-2">Mengembangkan Ratusan Games dan Aplikasi dengan unsur
-                        Pendidikan
-                        yang berkualitas.</li>
-                </ul>
+                {!! $data_general['MISI_PAGE'] !!}
             </div>
         </div>
     </div>

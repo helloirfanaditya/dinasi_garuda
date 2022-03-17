@@ -15,7 +15,7 @@
                                 alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $kingdom->title }}</h5>
-                                <p class="card-text">{{ $kingdom->period }}</p>
+                                <p class="card-text text-black">{{ $kingdom->period }}</p>
                             </div>
                         </div>
                     </a>

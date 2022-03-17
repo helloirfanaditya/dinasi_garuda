@@ -24,11 +24,7 @@ class KingdomController extends Controller
     {
         $data = Kingdom::all();
         return DataTables::of($data)
-            ->editColumn('no', function ($row) {
-                $row = 0;
-                $row++;
-                return $row;
-            })
+            ->addIndexColumn()
             ->editColumn('kerajaan', function ($row) {
                 $mimes = '
                     <div class="d-flex align-items-center">

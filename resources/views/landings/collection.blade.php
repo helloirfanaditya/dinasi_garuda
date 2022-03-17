@@ -8,7 +8,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-3">
-                <ul class="list-group">
+                <ul class="list-group" id="list-item-collection">
                     <li class="list-group-item"><a href="/collection?cat=most"
                             class="text-black {{ 'most' == request()->get('cat') ? 'active' : '' }}">Most
                             Popular</a></li>
@@ -24,7 +24,8 @@
                     @foreach ($collections as $kingdom)
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                             <div class="card">
-                                <a href="{{ $kingdom->url_link }}" style="text-decoration: none" target="_blank">
+                                <a href="{{ route('collection.detail', ['id' => $kingdom->id]) }}"
+                                    style="text-decoration: none">
                                     <img class="card-img-top"
                                         src="{{ asset('assets/admin/collection-assets/' . $kingdom->image) }}"
                                         alt="Card image cap">

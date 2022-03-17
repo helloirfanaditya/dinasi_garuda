@@ -3,6 +3,41 @@
     border: none;
 }
 
+.hidden-now {
+    display: none !important;
+}
+
+#kingdom_nusantara_title {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+#kingdom_nusantara_title::before {
+    content: 'Kingdom';
+    position: absolute;
+    transform: translate(-30%, -50%);
+    font-size: 170px;
+    z-index: -1;
+    color: rgb(247, 247, 247);
+}
+
+#media_partner_title::before {
+    content: 'Media Partner';
+    position: absolute;
+    transform: translate(-40%, -50%);
+    font-size: 150px;
+    z-index: -1;
+    color: rgb(247, 247, 247);
+}
+
+#new_collection_title::before {
+    content: 'Collection';
+    position: absolute;
+    transform: translate(-40%, -50%);
+    font-size: 170px;
+    z-index: -1;
+    color: rgb(247, 247, 247);
+}
+
 .active {
     color: black !important;
     font-weight: 800;
@@ -22,9 +57,19 @@
 .font-description {
     font-size: 20px;
 }
-.list-group .list-group-item {
+#list-item-collection .list-group-item {
     border: none;
     font-size: 20px;
+}
+.justify-content-center .list-group-item {
+    border: none;
+    font-size: 20px;
+}
+.filtr-active {
+    border-bottom: 4px solid #FF9921 !important;
+}
+.align-items-center .list-group-item:hover {
+    cursor: pointer;
 }
 #hero_image {
     background:url('../img/header.png');

@@ -64,5 +64,28 @@ Route::group(['prefix' => 'admin', 'middleware' => 'Admin-Permission'], function
     Route::post('/news/update/{id}', 'Admin\NewsController@update')->name('admin.news.update');
     Route::get('/news/delete/{id}', 'Admin\NewsController@delete')->name('admin.news.delete');
 
+    // General
+    Route::get('/setting', 'Admin\GeneralController@index')->name('admin.general');
+    Route::post('/setting/logo-dark', 'Admin\GeneralController@logoDark')->name('admin.general-logo-dark');
+    Route::post('/setting/logo-light', 'Admin\GeneralController@logoLight')->name('admin.general-logo-light');
+    Route::post('/setting/logo-icon', 'Admin\GeneralController@logoSm')->name('admin.general.logo-sm');
+    Route::post('/setting/favicon', 'Admin\GeneralController@logoFavicon')->name('admin.general.logo-favicon');
+    Route::post('/setting/title', 'Admin\GeneralController@settingTitle')->name('admin.general.title');
+    Route::post('/setting/app_url', 'Admin\GeneralController@settingAppUrl')->name('admin.general.app_url');
+    Route::post('/setting/description', 'Admin\GeneralController@settingDescription')->name('admin.general.descrtipion');
+    Route::post('/setting/phone', 'Admin\GeneralController@settingPhone')->name('admin.general.phone');
+    Route::post('/setting/email', 'Admin\GeneralController@settingEmail')->name('admin.general.email');
+
+    // General Header
+    Route::post('/setting/header/title-header', 'Admin\GeneralController@titleHeader')->name('admin.general.title-header');
+    Route::post('/setting/header/youtube-link', 'Admin\GeneralController@youtubeLink')->name('admin.general.youtube-link');
+
+    // About
+    Route::post('/setting/about/store', 'Admin\GeneralController@aboutStore')->name('admin.general.about-store');
+
+    // Visi Misi
+    Route::post('/setting/visi-misi/visi_page', 'Admin\GeneralController@visiPage')->name('admin.general.visi-page');
+    Route::post('/setting/visi-misi/misi_page', 'Admin\GeneralController@misiPage')->name('admin.general.misi-page');
+
     Route::get('/logout', 'Admin\AuthController@logout');
 });

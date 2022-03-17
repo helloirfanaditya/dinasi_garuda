@@ -12,7 +12,7 @@
     <link href="{{ asset('assets/admin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="authentication-bg authentication-bg-pattern d-flex align-items-center">
+<body class="authentication-bg authentication-bg-pattern d-flex align-items-center" style="background-color: white;">
     <div class="home-btn d-none d-sm-block">
         <a href="index.html"><i class="fas fa-home h2 text-white"></i></a>
     </div>
@@ -21,16 +21,16 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 col-xl-5">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-body p-4">
                             <div class="text-center mb-4">
-                                <h2>Dinasi Garuda</h2>
+                                <h2>Dinasti Garuda</h2>
                             </div>
                             <form action="{{ route('admin.login.store') }}" class="pt-2" method="post">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <label for="emailaddress">Email address</label>
-                                    <input class="form-control" type="email" id="emailaddress" required=""
+                                    <label for="emailaddress">Email or Username</label>
+                                    <input class="form-control" type="text" id="emailaddress" required=""
                                         placeholder="Enter your email" name="email">
                                 </div>
                                 <div class="form-group mb-3">

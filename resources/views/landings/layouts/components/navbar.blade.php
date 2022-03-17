@@ -1,11 +1,13 @@
  <!--Navbar Start-->
- <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky  sticky-dark">
+ <nav class="navbar navbar-expand-lg  navbar-custom sticky-dark" style="background-color: white;width:100%;">
      <div class="container-fluid">
          <!-- LOGO -->
-         <a class="logo text-uppercase text-secondary semibold" href="/">Dinasi Garuda</a>
+         <a class="logo text-uppercase text-secondary semibold" href="/">
+             <img src="{{ asset('assets/landings/asseting/' . $data_general['LOGO_ICON']) }}" alt="">
+         </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-             <i class="mdi mdi-menu"></i>
+             <i class="fas fa-bars"></i>
          </button>
          <div class="collapse navbar-collapse" id="navbarCollapse">
              <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">

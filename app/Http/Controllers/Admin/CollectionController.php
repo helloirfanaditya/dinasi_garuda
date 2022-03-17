@@ -20,11 +20,7 @@ class CollectionController extends Controller
     {
         $data = Collection::with(['category'])->get();
         return DataTables::of($data)
-            ->editColumn('no', function ($row) {
-                $row = 0;
-                $row++;
-                return $row;
-            })
+            ->addIndexColumn()
             ->editColumn('collection', function ($row) {
                 $mimes = '
                     <div class="d-flex align-items-center">
@@ -128,11 +124,7 @@ class CollectionController extends Controller
     {
         $data = CollectionCategory::all();
         return DataTables::of($data)
-            ->editColumn('no', function ($row) {
-                $row = 0;
-                $row++;
-                return $row;
-            })
+            ->addIndexColumn()
             ->editColumn('created', function ($row) {
                 return $row->created_at->format('d, F Y');
             })

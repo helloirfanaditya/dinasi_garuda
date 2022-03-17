@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Mar 2022 pada 14.05
+-- Waktu pembuatan: 10 Mar 2022 pada 12.37
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 7.4.16
 
@@ -100,13 +100,13 @@ CREATE TABLE `collections` (
 --
 
 INSERT INTO `collections` (`id`, `collection_category_id`, `collection`, `url_link`, `image`, `description`, `view`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Gajah Madaaaa', 'https://opensea.io/assets/0x892848074ddea461a15f337250da3ce55580ca85/5171', 'gajah-madaaaazmv36wrbev.png', '<p>Trained in everything from packet sniffing to ray casting to sample slicing, these TPL spies are able to record and recreate any situation they witness, anywhere in the metaverse. However, their bulky, beeping gear tends to make it easy to catch them looking over your shoulder.</p>', 0, '2022-03-07 03:55:31', '2022-03-08 06:05:13'),
-(3, 5, 'Azuki #9572', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/9572', 'azuki-9572wfy4itauub.png', '<p>Created by&nbsp;</p>', 0, '2022-03-08 06:04:49', '2022-03-08 06:04:49'),
-(4, 1, 'Azuki #9016', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/9016', 'azuki-9016fv7a1st5en.png', '<p>Created by&nbsp;<a href=\"https://opensea.io/TeamAzuki?tab=created\">TeamAzuki</a></p>', 0, '2022-03-08 06:06:26', '2022-03-08 06:06:26'),
-(5, 1, 'Azuki #6574', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/6574', 'azuki-6574ffk0iqbcqu.png', '<p>Created by&nbsp;<a href=\"https://opensea.io/TeamAzuki?tab=created\">TeamAzuki</a></p>\r\n\r\n<p>&nbsp;</p>', 0, '2022-03-09 05:21:32', '2022-03-09 05:21:32'),
-(6, 2, 'Azuki #5059', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/5059', 'azuki-5059hwwrpeucwd.png', '<p>https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/5059</p>', 0, '2022-03-09 05:22:03', '2022-03-09 05:22:03'),
-(7, 3, 'Azuki #4752', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/4752', 'azuki-4752qmt0p4lqhj.png', '<p>https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/4752</p>', 0, '2022-03-09 05:23:06', '2022-03-09 05:23:06'),
-(8, 4, 'Azuki #9024', 'https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/9024', 'azuki-9024qf11gkkkqo.png', '<p>https://opensea.io/assets/0xed5af388653567af2f388e6224dc7c4b3241c544/9024</p>', 0, '2022-03-09 05:23:49', '2022-03-09 05:23:49');
+(1, 1, 'Gajah Mada', 'https://opensea.io/assets/0x892848074ddea461a15f337250da3ce55580ca85/5171', 'gajah-madagix6psweyi.png', '<p>Trained in everything from packet sniffing to ray casting to sample slicing, these TPL spies are able to record and recreate any situation they witness, anywhere in the metaverse. However, their bulky, beeping gear tends to make it easy to catch them looking over your shoulder.</p>', 0, '2022-03-07 03:55:31', '2022-03-10 03:16:20'),
+(3, 5, 'Dyah Pitaloka', 'https://www.google.com/', 'dyah-pitalokamp04c2okku.png', '<p>Created by&nbsp;</p>', 0, '2022-03-08 06:04:49', '2022-03-10 03:17:13'),
+(4, 1, 'Gatot Kaca', 'https://www.google.com/', 'gatot-kacaorslllfj7c.png', '<p>Created by&nbsp;</p>', 0, '2022-03-08 06:06:26', '2022-03-10 03:18:04'),
+(5, 1, 'Sultan Hasanuddin', 'https://www.google.com/', 'sultan-hasanuddincoegfcfz59.png', '<p>Created by</p>\r\n\r\n<p>&nbsp;</p>', 0, '2022-03-09 05:21:32', '2022-03-10 03:18:31'),
+(6, 2, 'Tribhuwana Parameswari', 'https://www.google.com/', 'tribhuwana-parameswariwrguzajmz5.png', '<p>https://www.google.com/</p>', 0, '2022-03-09 05:22:03', '2022-03-10 03:18:50'),
+(7, 3, 'Wisnuwardhana', 'https://www.google.com/', 'wisnuwardhanaqfkpzeysv4.png', '<p>https://www.google.com/</p>', 0, '2022-03-09 05:23:06', '2022-03-10 03:19:33'),
+(8, 4, 'Wisnuwardhana', 'https://www.google.com/', 'wisnuwardhanaersw62tcrj.png', '<p>https://www.google.com/</p>', 0, '2022-03-09 05:23:49', '2022-03-10 03:19:59');
 
 -- --------------------------------------------------------
 
@@ -163,6 +163,35 @@ INSERT INTO `events` (`id`, `title`, `image`, `date`, `place`, `description`, `s
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `generals`
+--
+
+CREATE TABLE `generals` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `value` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `generals`
+--
+
+INSERT INTO `generals` (`id`, `name`, `value`, `created_at`, `updated_at`) VALUES
+(2, 'LOGO_DARK', 'logo-darkkavvfxmyof.png', '2022-03-10 01:51:09', '2022-03-10 01:51:09'),
+(3, 'LOGO_LIGHT', 'logo-lighthmeflvuna6.png', '2022-03-10 01:52:31', '2022-03-10 01:52:31'),
+(4, 'LOGO_ICON', 'logo-icon1sikpxh5zd.png', '2022-03-10 01:53:44', '2022-03-10 01:53:44'),
+(5, 'LOGO_FAVICON', 'logo-faviconqrhi5r0miv.png', '2022-03-10 01:54:48', '2022-03-10 02:23:37'),
+(6, 'TITLE', 'Dinasi Garuda', '2022-03-10 01:55:53', '2022-03-10 02:32:01'),
+(7, 'APP_URL', 'https://play.google.com/store/apps/details?id=com.NusantaraInteractiveStudio.DinastiGaruda', '2022-03-10 01:56:07', '2022-03-10 01:56:07'),
+(8, 'DESCRIPTION', 'Tunjukkan dan Asah Pengetahuanmu serta Bangga dengan sejarah dan budaya yang kita miliki!', '2022-03-10 01:56:16', '2022-03-10 01:56:16'),
+(9, 'EMAIL', 'support@dinastigaruda.id', '2022-03-10 01:56:52', '2022-03-10 01:56:52'),
+(10, 'PHONE', '(021) 1232 1232', '2022-03-10 01:56:59', '2022-03-10 01:56:59');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `kingdoms`
 --
 
@@ -210,7 +239,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2022_03_07_102647_create_collection_categories_table', 3),
 (11, '2022_03_07_102707_create_collections_table', 3),
 (12, '2022_03_08_082100_create_events_table', 4),
-(13, '2022_03_08_093921_create_news_table', 5);
+(13, '2022_03_08_093921_create_news_table', 5),
+(15, '2022_03_09_205757_create_generals_table', 6);
 
 -- --------------------------------------------------------
 
@@ -314,6 +344,12 @@ ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `generals`
+--
+ALTER TABLE `generals`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `kingdoms`
 --
 ALTER TABLE `kingdoms`
@@ -381,6 +417,12 @@ ALTER TABLE `events`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT untuk tabel `generals`
+--
+ALTER TABLE `generals`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT untuk tabel `kingdoms`
 --
 ALTER TABLE `kingdoms`
@@ -390,7 +432,7 @@ ALTER TABLE `kingdoms`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `news`

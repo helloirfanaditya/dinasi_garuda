@@ -15,7 +15,16 @@
     <link href="{{ asset('assets/admin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/admin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/admin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        a.active {
+            color: #FF9921 !important;
+            background-color: #f1f5f7;
+            border-right-color: #FF9921 !important;
+        }
+
+    </style>
 </head>
 
 <body>

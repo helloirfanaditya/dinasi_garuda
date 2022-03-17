@@ -8,7 +8,7 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Greeva</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dinasti Garuda</a></li>
                                     <li class="breadcrumb-item active">News</li>
                                 </ol>
                             </div>
@@ -30,10 +30,10 @@
                                 <table class="table table-borderless" id="news-table">
                                     <thead>
                                         <tr>
-                                            <th>Date/Time</th>
-                                            <th>News</th>
-                                            <th>View</th>
-                                            <th>Action</th>
+                                            <th>DATE/TIME</th>
+                                            <th>NEWS</th>
+                                            <th>VIEW</th>
+                                            <th>ACTION</th>
                                         </tr>
                                     </thead>
                                 </table>
